@@ -1,6 +1,91 @@
 @import "tailwindcss";
 
+@theme {
+  --color-dark-violet: #2d2641;
+  --color-grayish-blue: #96a9c6;
+  --color-very-dark-violet: #2c2830;
+  --color-dark-grayish-violet: #77717c;
+  --color-very-light-gray: #fafafa;
+  --color-mauve: #c396c6;
+  --color-divider: #dadada;
+
+  --container-page: 69.375rem;
+
+  --text-display: 3rem;
+  --text-display--line-height: 3rem;
+  --text-display-lg: 4.5rem;
+  --text-display-lg--line-height: 4rem;
+  --text-heading: 2.5rem;
+  --text-heading--line-height: 2.5rem;
+  --text-heading-lg: 3.5rem;
+  --text-heading-lg--line-height: 3.5rem;
+  --text-title: 1.75rem;
+  --text-title--line-height: 2.375rem;
+  --text-body: 1rem;
+  --text-body--line-height: 1.625rem;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 0.9375rem;
+  --text-menu: 1.25rem;
+  --text-menu--line-height: 2.5rem;
+
+  --tracking-display: -0.0139em;
+  --tracking-label: 0.1154em;
+  --tracking-menu: 0.0682em;
+}
+
 @theme inline {
   --font-sans: var(--font-karla);
   --font-display: var(--font-dm-serif-display);
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-body text-dark-grayish-violet;
+  }
+  a,
+  button {
+    @apply v-focus-ring;
+  }
+}
+
+@utility v-focus-ring {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-very-dark-violet;
+}
+
+@utility v-focus-ring-inverse {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+}
+
+@utility v-scroll-lock {
+  @media (width < 48rem) {
+    overflow: hidden;
+  }
+}
+
+@utility v-label {
+  @apply text-label font-bold tracking-label uppercase;
+}
+
+@utility v-menu-label {
+  @apply text-menu font-bold tracking-menu uppercase;
+}
+
+@utility v-nav-link {
+  @apply v-label text-dark-grayish-violet transition-colors hover:text-very-dark-violet motion-reduce:transition-none;
+}
+
+@utility v-menu-link {
+  @apply v-menu-label v-focus-ring-inverse block text-center text-white transition-colors hover:text-grayish-blue motion-reduce:transition-none;
+}
+
+@utility v-btn {
+  @apply inline-flex items-center justify-center border-[1.5px] transition-colors motion-reduce:transition-none;
+}
+
+@utility v-btn-dark {
+  @apply border-very-dark-violet text-very-dark-violet hover:bg-very-dark-violet hover:text-white;
+}
+
+@utility v-btn-light {
+  @apply v-focus-ring-inverse border-white text-white hover:bg-white hover:text-very-dark-violet;
 }
