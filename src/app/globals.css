@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-karla);
+  --font-display: var(--font-dm-serif-display);
+}
