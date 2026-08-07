@@ -39,6 +39,11 @@
 }
 
 @layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
   body {
     @apply bg-white font-sans text-body text-dark-grayish-violet;
   }
@@ -106,4 +111,16 @@
 
 @utility v-btn-light {
   @apply border-white text-white v-focus-ring-inverse hover:bg-white hover:text-very-dark-violet;
+}
+
+@utility v-footer-link {
+  @apply v-label text-dark-violet hover:underline;
+}
+
+@utility v-social-link {
+  @apply block text-dark-grayish-violet transition-colors hover:text-very-dark-violet motion-reduce:transition-none;
+}
+
+@utility v-credit-link {
+  @apply text-dark-violet underline underline-offset-2 hover:no-underline;
 }

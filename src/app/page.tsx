@@ -1,4 +1,4 @@
-import { Header } from "@/components/layout";
+import { Footer, Header } from "@/components/layout";
 import { Difference, Hero, HowWeWork } from "@/views/home";
 
 export default function Home() {
@@ -11,6 +11,8 @@ export default function Home() {
         <Difference />
         <HowWeWork />
       </main>
+
+      <Footer />
     </>
   );
 }
