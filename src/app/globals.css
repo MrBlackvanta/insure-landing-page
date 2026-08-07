@@ -71,6 +71,15 @@
   }
 }
 
+@utility v-heading {
+  @apply font-display text-heading tracking-display;
+
+  @media (width < 23.375rem) {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+}
+
 @utility v-label {
   @apply text-label font-bold tracking-label uppercase;
 }

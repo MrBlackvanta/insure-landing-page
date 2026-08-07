@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="mx-auto max-w-135 text-center text-white lg:mx-0 lg:text-left">
             <div className="hidden h-px w-37.5 bg-white lg:block" />
 
-            <h1 className="mx-auto max-w-[6.9em] v-display lg:mx-0 lg:mt-15.75 lg:text-display-lg">
+            <h1 className="mx-auto max-w-[7.05em] v-display lg:mx-0 lg:mt-15.75 lg:text-display-lg">
               {hero.title}
             </h1>
 
