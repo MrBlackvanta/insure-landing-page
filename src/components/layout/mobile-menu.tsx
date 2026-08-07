@@ -27,15 +27,18 @@ export default function MobileMenu({ links, cta }: MobileMenuProps) {
     const onResize = () => {
       if (window.matchMedia("(min-width: 48rem)").matches) setOpen(false);
     };
+    const behindOverlay = document.querySelectorAll("main, footer");
 
     document.addEventListener("keydown", onKeyDown);
     window.addEventListener("resize", onResize);
     document.body.classList.add("v-scroll-lock");
+    behindOverlay.forEach((element) => element.setAttribute("inert", ""));
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("resize", onResize);
       document.body.classList.remove("v-scroll-lock");
+      behindOverlay.forEach((element) => element.removeAttribute("inert"));
     };
   }, [open]);
 
