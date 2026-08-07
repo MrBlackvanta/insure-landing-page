@@ -124,3 +124,20 @@
 @utility v-credit-link {
   @apply text-dark-violet underline underline-offset-2 hover:no-underline;
 }
+
+@keyframes v-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+@utility v-reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+  }
+}

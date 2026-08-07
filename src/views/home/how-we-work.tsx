@@ -8,7 +8,7 @@ export default function HowWeWork() {
       className="px-6 pb-35 lg:px-10 lg:pb-37.5"
     >
       <div className="mx-auto max-w-page">
-        <div className="relative isolate overflow-hidden bg-dark-violet px-6 py-18 text-center lg:flex lg:h-62.5 lg:items-center lg:justify-between lg:px-20 lg:py-0 lg:text-left">
+        <div className="relative isolate v-reveal overflow-hidden bg-dark-violet px-6 py-18 text-center lg:flex lg:h-62.5 lg:items-center lg:justify-between lg:px-20 lg:py-0 lg:text-left">
           <div
             aria-hidden="true"
             className="absolute right-0 bottom-5.25 -z-10 h-79.25 w-44 bg-[url('/bg-pattern-how-we-work-mobile.svg')] lg:hidden"

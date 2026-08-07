@@ -15,7 +15,7 @@ export default function Footer() {
       />
 
       <div className="mx-auto max-w-page">
-        <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-0">
+        <div className="flex v-reveal flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-0">
           <Link href="/" className="text-very-dark-violet v-focus-ring">
             <LogoIcon className="w-28" />
           </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
           className="mt-10 grid gap-10 text-center md:grid-cols-4 md:gap-x-7.5 lg:mt-11.75 lg:text-left"
         >
           {footerColumns.map((column) => (
-            <div key={column.title}>
+            <div key={column.title} className="v-reveal">
               <h2 className="v-label text-dark-grayish-violet">
                 {column.title}
               </h2>
