@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout";
-import { Hero } from "@/views/home";
+import { Difference, Hero, HowWeWork } from "@/views/home";
 
 export default function Home() {
   return (
@@ -8,6 +8,8 @@ export default function Home() {
 
       <main className="flex-1">
         <Hero />
+        <Difference />
+        <HowWeWork />
       </main>
     </>
   );
