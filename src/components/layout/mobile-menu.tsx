@@ -2,6 +2,7 @@
 
 import { CloseIcon, MenuIcon } from "@/components/icons";
 import type { Link, NavLink } from "@/data";
+import { cn } from "@/lib";
 import { useEffect, useRef, useState } from "react";
 
 type MobileMenuProps = {
@@ -52,37 +53,39 @@ export default function MobileMenu({ links, cta }: MobileMenuProps) {
         {open ? <CloseIcon className="w-3" /> : <MenuIcon className="w-4" />}
       </button>
 
-      {open && (
-        <div
-          id="mobile-menu"
-          className="fixed inset-x-0 top-20 bottom-0 bg-very-dark-violet bg-[url('/bg-pattern-mobile-nav.svg')] bg-size-[100%_auto] bg-bottom bg-no-repeat px-6 pt-10 transition-opacity duration-200 motion-reduce:transition-none md:hidden starting:opacity-0"
-        >
-          <nav aria-label="Main">
-            <ul className="flex flex-col gap-6">
-              {links.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="v-menu-link"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-              <li>
+      <div
+        id="mobile-menu"
+        inert={!open}
+        className={cn(
+          "fixed inset-x-0 top-20 bottom-0 hidden bg-very-dark-violet bg-[url('/bg-pattern-mobile-nav.svg')] bg-size-[100%_auto] bg-bottom bg-no-repeat px-6 pt-10 opacity-0 transition-[opacity,display] transition-discrete duration-200 motion-reduce:transition-none md:hidden starting:opacity-0",
+          { "block opacity-100": open },
+        )}
+      >
+        <nav aria-label="Main">
+          <ul className="flex flex-col gap-6">
+            {links.map((link) => (
+              <li key={link.label}>
                 <a
-                  href={cta.href}
+                  href={link.href}
                   onClick={() => setOpen(false)}
-                  className="v-btn h-14 w-full v-btn-light v-menu-label"
+                  className="v-menu-link"
                 >
-                  {cta.label}
+                  {link.label}
                 </a>
               </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+            ))}
+            <li>
+              <a
+                href={cta.href}
+                onClick={() => setOpen(false)}
+                className="v-btn h-14 w-full v-btn-light v-menu-label"
+              >
+                {cta.label}
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 }
