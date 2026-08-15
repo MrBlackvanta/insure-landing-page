@@ -19,7 +19,7 @@ const dmSerifDisplay = DM_Serif_Display({
 const title = "Insure landing page";
 const description =
   "Humanizing your insurance. Get life insurance coverage easier and faster — a Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://vanta-insure-landing-page.netlify.app";
+const siteUrl = "https://insure-landing-page.abdelrhman-ahmed8881.workers.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

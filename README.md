@@ -21,7 +21,8 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 ### Links
 
 - Solution URL: [GitHub](https://github.com/MrBlackvanta/insure-landing-page)
-- Live Site URL: [Netlify](https://vanta-insure-landing-page.netlify.app)
+- Live Site URL: [Cloudflare](https://insure-landing-page.abdelrhman-ahmed8881.workers.dev)
+- Mirror: [Netlify](https://vanta-insure-landing-page.netlify.app)
 
 ## My process
 
