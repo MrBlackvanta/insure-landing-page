@@ -16,13 +16,22 @@ const dmSerifDisplay = DM_Serif_Display({
   display: "swap",
 });
 
-const title = "Insure landing page";
+const SITE_URL = "https://insure-landing-page.abdelrhman-ahmed8881.workers.dev";
+
+const name = "Insure";
+const title = `${name} | Humanizing your insurance`;
 const description =
-  "Humanizing your insurance. Get life insurance coverage easier and faster — a Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://insure-landing-page.abdelrhman-ahmed8881.workers.dev";
+  "Humanizing your insurance. Get your life insurance coverage easier and faster, with a plan that is right for you.";
+
+const shareImage = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Insure, life insurance built around the people it protects.",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title,
   description,
   alternates: { canonical: "/" },
@@ -30,14 +39,16 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: title,
+    siteName: name,
     locale: "en_US",
     type: "website",
+    images: [shareImage],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [shareImage],
   },
 };
 
