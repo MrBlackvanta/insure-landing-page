@@ -54,6 +54,9 @@
   button {
     @apply v-focus-ring;
   }
+  button:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 @utility v-focus-ring {
