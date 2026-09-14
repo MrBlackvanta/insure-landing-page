@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, Karla } from "next/font/google";
+import { SITE_URL } from "@/app/site";
 import "./globals.css";
 
 const karla = Karla({
@@ -15,8 +16,6 @@ const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
   display: "swap",
 });
-
-const SITE_URL = "https://insure-landing-page.abdelrhman-ahmed8881.workers.dev";
 
 const name = "Insure";
 const title = `${name} | Humanizing your insurance`;
